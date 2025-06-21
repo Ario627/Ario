@@ -1,0 +1,232 @@
+/* style.css */
+body {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0;
+    margin: 0;
+    color: #333;
+}
+
+.love-calculator {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 500px; /* Lebarkan sedikit untuk gambar */
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #e91e63;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    margin-top: 5px;
+    color: #555;
+    font-size: 1rem;
+}
+
+.gauge-container {
+    position: relative;
+    width: 250px;
+    height: 125px;
+    margin: 20px auto;
+}
+
+.gauge {
+    width: 100%;
+    height: 100%;
+    border: 15px solid #f0f0f0;
+    border-top-color: #ff7eb9;
+    border-right-color: #ff7eb9;
+    border-left-color: #ff7eb9;
+    border-radius: 250px 250px 0 0;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #4caf50, #ffeb3b, #f44336);
+}
+
+.needle {
+    width: 4px;
+    height: 110px;
+    background-color: #333;
+    border-radius: 4px 4px 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: translateX(-50%) rotate(-90deg);
+    transition: transform 2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.gauge-center {
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.percentage-display {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #e91e63;
+}
+
+.result-message {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #e91e63;
+    margin: 15px 0;
+    min-height: 30px;
+}
+
+.analysis-box {
+    background-color: #fce4ec;
+    border: 1px dashed #e91e63;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px auto;
+    font-size: 0.9rem;
+    color: #ad1457;
+    min-height: 50px;
+    display: none;
+}
+
+/* === STYLE BARU UNTUK GAMBAR DAN EFEK 3D === */
+.image-upload-area {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.image-container {
+    perspective: 1000px; /* Ini penting untuk efek 3D */
+    width: 150px;
+    text-align: center;
+}
+
+.image-container img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%; /* Bikin gambar jadi bulat */
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 1.5s ease-in-out; /* Animasi putaran */
+}
+
+/* KELAS ANIMASI 3D */
+.image-container.animate-3d img {
+    transform: rotateY(360deg); /* Berputar 360 derajat pada sumbu Y */
+}
+
+.file-input {
+    display: none; /* Sembunyikan input file bawaan */
+}
+
+.file-label {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #ff7eb9;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.file-label:hover {
+    background-color: #e91e63;
+}
+
+.input-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    width: 150px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 1rem;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #ff7eb9;
+}
+
+.heart-icon {
+    font-size: 1.5rem;
+    color: #e91e63;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.button-area {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#calculateBtn {
+    background-color: #e91e63;
+    color: white;
+}
+
+#calculateBtn:hover {
+    background-color: #c2185b;
+    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
+    transform: translateY(-2px);
+}
+
+#resetBtn {
+    background-color: #f0f0f0;
+    color: #555;
+}
+
+#resetBtn:hover {
+    background-color: #e0e0e0;
+}

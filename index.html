@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Cinta 3D</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="love-calculator">
+        <h1>Kalkulator Cinta 3D</h1>
+        <p class="subtitle">Seberapa cocok kalian berdua?</p>
+
+        <div class="gauge-container">
+            <div class="gauge">
+                <div class="needle" id="needle"></div>
+                <div class="gauge-center"></div>
+            </div>
+            <div class="percentage-display" id="percentage-display">0%</div>
+        </div>
+
+        <div class="result-message" id="result-message">
+            Masukkan dua nama & foto untuk memulai
+        </div>
+        
+        <div class="analysis-box" id="analysis-box">
+            </div>
+        
+        <div class="image-upload-area">
+            <div class="image-container" id="image-container1">
+                <img src="https://via.placeholder.com/150" alt="Foto 1" id="image-preview1">
+                <input type="file" id="file-input1" class="file-input" accept="image/*">
+                <label for="file-input1" class="file-label">Pilih Foto 1</label>
+            </div>
+            <div class="image-container" id="image-container2">
+                <img src="https://via.placeholder.com/150" alt="Foto 2" id="image-preview2">
+                <input type="file" id="file-input2" class="file-input" accept="image/*">
+                <label for="file-input2" class="file-label">Pilih Foto 2</label>
+            </div>
+        </div>
+        <div class="input-area">
+            <input type="text" id="name1" placeholder="Nama Kamu">
+            <span class="heart-icon">&hearts;</span>
+            <input type="text" id="name2" placeholder="Nama Pasanganmu">
+        </div>
+
+        <div class="button-area">
+            <button id="calculateBtn">CEK CINTANYA</button>
+            <button id="resetBtn">RESET</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
